@@ -9,3 +9,5 @@ build:
 
 create-env:
 	cp ./app/.env.example ./app/.env
+
+.PHONY: test
