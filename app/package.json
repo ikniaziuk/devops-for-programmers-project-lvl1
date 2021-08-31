@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "test": "jest"
+    "test": "jest ./tests/"
   },
   "devDependencies": {
     "jest": "^27.1.0"
@@ -38,8 +38,5 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": "^6.0.0"
   },
-  "license": "MIT",
-  "jest": {
-    "modulePathIgnorePatterns": [".cache"]
-  }
+  "license": "MIT"
 }
