@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "test": "jest ./tests/"
+    "test": "jest ./tests/root.test.js"
   },
   "devDependencies": {
     "jest": "^27.1.0"
