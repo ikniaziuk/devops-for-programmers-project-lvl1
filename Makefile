@@ -1,13 +1,13 @@
 test:
-	docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit
+	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 start:
-	docker-compose --env-file ./app/.env up
+	docker-compose up
 
 build:
 	docker-compose -f docker-compose.yml build app
 
 create-env:
-	cp ./app/.env.example ./app/.env
+	echo ./app/.env ./.env | xargs -n 1 cp ./app/.env.example
 
 .PHONY: test
