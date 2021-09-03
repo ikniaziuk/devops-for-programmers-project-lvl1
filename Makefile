@@ -1,5 +1,4 @@
-ci:
-	create-env test
+ci: create-env test
 
 test:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
