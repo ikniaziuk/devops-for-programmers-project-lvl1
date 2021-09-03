@@ -1,13 +1,16 @@
 test:
-	docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit
+	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 start:
-	docker-compose --env-file ./app/.env up
+	docker-compose -up
 
-build:
-	docker-compose -f docker-compose.yml build app
+build-prod:
+	docker-compose -f docker-compose.yml build
+
+build-dev:
+	make create-env && docker-compose build
 
 create-env:
-	cp ./app/.env.example ./app/.env
+	cp ./app/.env.example ./app/.env && cp ./app/.env.example .env
 
 .PHONY: test
