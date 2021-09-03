@@ -7,10 +7,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    command: ["npm", "test"]
+    command: ["make", "test"]
 
   db:
-    image: postgres:latest
+    image: postgres:13.4
     ports:
       - "5432:5432"
     restart: always
