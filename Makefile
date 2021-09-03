@@ -1,5 +1,5 @@
 test:
-	docker-compose -f docker-compose.yml --env-file ./app/.env -p 8080:8080 up --abort-on-container-exit
+	docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit
 
 start:
 	docker-compose --env-file ./app/.env up
