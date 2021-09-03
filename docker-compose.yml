@@ -7,6 +7,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
+    expose:
+      - "8080"
     command: ["npm", "test"]
 
   db:
@@ -14,8 +16,6 @@ services:
     ports:
       - "5432:5432"
     restart: always
-    env_file:
-      - .env
     environment:
       - POSTGRES_DB=${DATABASE_NAME}
       - POSTGRES_USER=${DATABASE_USERNAME:?}
