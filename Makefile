@@ -4,7 +4,7 @@ test:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 start:
-	create-env docker-compose up
+	docker-compose up
 
 build:
 	docker-compose -f docker-compose.yml build
