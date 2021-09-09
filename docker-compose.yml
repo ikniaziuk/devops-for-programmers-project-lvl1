@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    command: ["make", "test"]
+    command: ["npm", "test"]
 
   db:
     image: postgres:13.4
